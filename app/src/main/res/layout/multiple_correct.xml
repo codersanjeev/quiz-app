@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:id="@+id/question_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_below="@id/question_view"
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_below="@id/option1"
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_below="@id/option2"
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:layout_below="@id/option3"
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_below="@id/option4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/calculate_score"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
