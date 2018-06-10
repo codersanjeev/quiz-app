@@ -1,50 +1,267 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android" >
-    <RelativeLayout android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:orientation="vertical">
+
         <TextView
-            android:id="@+id/question_view"
+            android:text="OS computer abbreviation usually means ?"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question1"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Enter your answer here"
+            android:inputType="text"
+            android:id="@+id/answer1"
             android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="What does CPU stand for ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question2"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Enter your answer here"
+            android:inputType="text"
+            android:id="@+id/answer2"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Which device can be used to store charge ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question3"/>
         <RadioGroup
-            android:id="@+id/options_view"
-            android:layout_below="@id/question_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
-                android:id="@+id/option1"
+                android:text="Transistor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/option1_question3"/>
             <RadioButton
-                android:id="@+id/option2"
+                android:text="Diode"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/option2_question3"/>
             <RadioButton
-                android:id="@+id/option3"
+                android:text="Capacitor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/option3_question3"/>
             <RadioButton
-                android:id="@+id/option4"
+                android:text="Resistor"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:id="@+id/option4_question3"/>
         </RadioGroup>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:layout_below="@id/options_view"
-            android:orientation="horizontal"
+
+        <TextView
+            android:text="Modem stands for"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question4"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Modulator Demodulator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option1_question4"/>
+            <RadioButton
+                android:text="Memory Demagnetization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option2_question4"/>
+            <RadioButton
+                android:text="Monetary Demarkation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option3_question4"/>
+            <RadioButton
+                android:text="Monetary Devaluation Exchange Mechanism"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option4_question4"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="In digital circuit, what is 1 AND 1 ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question5"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option1_question5"/>
+            <RadioButton
+                android:text="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option2_question5"/>
+            <RadioButton
+                android:text="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option3_question5"/>
+            <RadioButton
+                android:text="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option4_question5"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="A computer on network that requests file from another computer ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question6"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option1_question6"/>
+            <RadioButton
+                android:text="Router"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option2_question6"/>
+            <RadioButton
+                android:text="Client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option3_question6"/>
+            <RadioButton
+                android:text="Server"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/option4_question6"/>
+        </RadioGroup>
+
+        <TextView
+            android:text="Which of the following is/are Mobile Companies ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question7"/>
+        <CheckBox
+            android:text="Oppo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option1_question7"/>
+        <CheckBox
+            android:text="Tata Sky"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option2_question7"/>
+        <CheckBox
+            android:text="Vivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option3_question7"/>
+        <CheckBox
+            android:text="Nokia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option4_question7"/>
+
+        <TextView
+            android:text="Which of the following is/are Google product/s ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question8"/>
+        <CheckBox
+            android:text="Youtube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option1_question8"/>
+        <CheckBox
+            android:text="Duo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option2_question8"/>
+        <CheckBox
+            android:text="Siri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option3_question8"/>
+        <CheckBox
+            android:text="Cortona"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option4_question8"/>
+
+        <TextView
+            android:text="Which of the following metal/s is/are not ductile ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question9"/>
+        <CheckBox
+            android:text="Copper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option1_question9"/>
+        <CheckBox
+            android:text="Arsenic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option2_question9"/>
+        <CheckBox
+            android:text="Barium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option3_question9"/>
+        <CheckBox
+            android:text="Antimony"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option4_question9"/>
+
+        <TextView
+            android:text="Which of the following is/are not a part of Internet ?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/question0"/>
+        <CheckBox
+            android:text="World Wide Web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option1_question0"/>
+        <CheckBox
+            android:text="CD-ROM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option2_question0"/>
+        <CheckBox
+            android:text="SSD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option3_question0"/>
+        <CheckBox
+            android:text="HTTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/option4_question0"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
-                android:id="@+id/next_question"
-                android:layout_width="wrap_content"
+                android:text="Submit"
+                android:onClick="CalculateScore"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-            <Button
-                android:id="@+id/calculate_score"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
 </ScrollView>

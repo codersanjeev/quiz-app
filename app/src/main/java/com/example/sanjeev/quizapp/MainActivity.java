@@ -4,46 +4,158 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
-    TextView question_view;
-    Button submit_button, next_question;
-    RadioGroup options_group;
-    RadioButton option1, option2, option3, option4;
-    int score;
-
+    EditText answerView1, answerView2;
+    RadioButton[] optionRadioButtons;
+    int[] optionRadioButtonIDs = {R.id.option1_question3, R.id.option2_question3, R.id.option3_question3, R.id.option4_question3,
+            R.id.option1_question4, R.id.option2_question4, R.id.option3_question4, R.id.option4_question4,
+            R.id.option1_question5, R.id.option2_question5, R.id.option3_question5, R.id.option4_question5,
+            R.id.option1_question6, R.id.option2_question6, R.id.option3_question6, R.id.option4_question6};
+    CheckBox[] optionCheckBoxes;
+    int[] optionCheckBoxesIDs = {R.id.option1_question7, R.id.option2_question7, R.id.option3_question7, R.id.option4_question7,
+            R.id.option1_question8, R.id.option2_question8, R.id.option3_question8, R.id.option4_question8,
+            R.id.option1_question9, R.id.option2_question9, R.id.option3_question9, R.id.option4_question9,
+            R.id.option1_question0, R.id.option2_question0, R.id.option3_question0, R.id.option4_question0};
+    int totalScore;
+    String quizCompleteMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        score = 0;
-        question_view = findViewById(R.id.question_view);
-        submit_button = findViewById(R.id.calculate_score);
-        next_question = findViewById(R.id.next_question);
-        options_group = findViewById(R.id.options_view);
-        option1 = findViewById(R.id.option1);
-        option2 = findViewById(R.id.option2);
-        option3 = findViewById(R.id.option3);
-        option4 = findViewById(R.id.option4);
-        submit_button.setOnClickListener(this);
-        next_question.setOnClickListener(this);
+
+        answerView1 = findViewById(R.id.answer1);
+        answerView2 = findViewById(R.id.answer2);
+
+        optionRadioButtons = new RadioButton[16];
+        for(int i=0; i<16; i++)
+            optionRadioButtons[i] = findViewById(optionRadioButtonIDs[i]);
+
+        optionCheckBoxes = new CheckBox[16];
+        for(int i=0; i<16; i++)
+            optionCheckBoxes[i] = findViewById(optionCheckBoxesIDs[i]);
     }
 
-    @Override
-    public void onClick(View v) {
-        if(v == submit_button){
-            Toast.makeText(this, "Your Quiz Score is " + String.valueOf(score), Toast.LENGTH_LONG).show();
-        }
-        else{
-            //Toast.makeText(this, "Your Quiz Score is " + String.valueOf(score), Toast.LENGTH_LONG).show();
-            // Update View
+    public void CalculateScore(View view) {
+        totalScore = 0;
+        /*
+         * Question Number => 1
+         * OS computer abbreviation usually means ?
+         *
+         * Answer
+         * Operating System
+         */
+        if(answerView1.getText().toString().toLowerCase().equals("operating system"))
+            totalScore += 1;
+        /*
+         * Question Number => 2
+         * What does CPU stand for ?
+         *
+         * Answer
+         * Central Processing Unit
+         */
+        if(answerView2.getText().toString().toLowerCase().equals("central processing unit"))
+            totalScore += 1;
+        /*
+         * Question Number => 3
+         * Which device can be used to store charge ?
+         *
+         * Answer
+         * Capacitor (Option Number 3)
+         */
+        if(optionRadioButtons[2].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 4
+         * Modem stands for
+         *
+         * Answer
+         * Modulator Demodulator (Option Number 1)
+         */
+        if(optionRadioButtons[4].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 5
+         * In digital circuit, what is 1 AND 1 ?
+         *
+         * Answer
+         * 1 (Option Number 2)
+         */
+        if(optionRadioButtons[9].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 6
+         * A computer on network that requests file from another computer ?
+         *
+         * Answer
+         * Client (Option Number => 3)
+         */
+        if(optionRadioButtons[14].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 7
+         * Which of the following is/are Mobile Companies ?
+         *
+         * Answer
+         * Option 1 and 3
+         */
+        if(optionCheckBoxes[0].isChecked()
+                && !optionCheckBoxes[1].isChecked()
+                && optionCheckBoxes[2].isChecked()
+                && !optionCheckBoxes[3].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 8
+         * Which of the following is/are Google product/s ?
+         *
+         * Answer
+         * Option 1 and 2
+         */
+        if(optionCheckBoxes[4].isChecked()
+                && optionCheckBoxes[5].isChecked()
+                && !optionCheckBoxes[6].isChecked()
+                && !optionCheckBoxes[7].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 9
+         * Which of the following metal/s is/are not ductile ?
+         *
+         * Answer
+         * Option Number 2 and 4
+         */
+        if(!optionCheckBoxes[8].isChecked()
+                && optionCheckBoxes[9].isChecked()
+                && !optionCheckBoxes[10].isChecked()
+                && optionCheckBoxes[11].isChecked())
+            totalScore += 1;
+        /*
+         * Question Number => 10
+         * Which of the following is/are not a part of Internet ?
+         *
+         * Answer
+         * Option Number 2 and 3
+         */
+        if(!optionCheckBoxes[12].isChecked()
+                && optionCheckBoxes[13].isChecked()
+                && optionCheckBoxes[14].isChecked()
+                && !optionCheckBoxes[15].isChecked())
+            totalScore += 1;
 
-        }
+        if(totalScore == 10)
+            quizCompleteMessage = "Perfect ! Your Score is 10/10";
+        else if (totalScore < 10 && totalScore > 5)
+            quizCompleteMessage = "You are close ! Your Score is " + totalScore + "/10";
+        else
+            quizCompleteMessage = "Never Give Up ! Your Score is " + totalScore + "/10";
+
+        Toast.makeText(this, quizCompleteMessage, Toast.LENGTH_LONG).show();
     }
 }
