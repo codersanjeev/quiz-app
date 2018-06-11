@@ -3,12 +3,13 @@ package com.example.sanjeev.quizapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText answerView1, answerView2;
     RadioButton[] optionRadioButtons;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.option1_question0, R.id.option2_question0, R.id.option3_question0, R.id.option4_question0};
     int totalScore;                 // Total Score of the Quiz
     String quizCompleteMessage;     // Custom Toast message to be displayed after completing the quiz
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // Binding Views with Variables
         answerView1 = findViewById(R.id.answer1);
         answerView2 = findViewById(R.id.answer2);
+        submit = findViewById(R.id.submitButton);
 
         optionRadioButtons = new RadioButton[16];
         for (int i = 0; i < 16; i++)
@@ -40,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
         optionCheckBoxes = new CheckBox[16];
         for (int i = 0; i < 16; i++)
             optionCheckBoxes[i] = findViewById(optionCheckBoxesIDs[i]);
+
+        submit.setOnClickListener(this);
     }
 
-    // On click of submit button
-    public void CalculateScore(View view) {
+    @Override
+    public void onClick(View v) {
         totalScore = 0;
         /*
          * Question Number => 1
