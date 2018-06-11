@@ -1,267 +1,284 @@
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/padding16">
 
         <TextView
-            android:text="OS computer abbreviation usually means ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question1"/>
+            android:id="@+id/question1"
+            style="@style/MyTextViewStyle"
+            android:text="@string/question1" />
+
         <EditText
-            android:layout_width="match_parent"
-            android:hint="Enter your answer here"
-            android:inputType="text"
             android:id="@+id/answer1"
-            android:layout_height="wrap_content" />
+            style="@style/MyEditTextStyle"
+            android:hint="@string/hint1" />
 
         <TextView
-            android:text="What does CPU stand for ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question2"/>
+            android:id="@+id/question2"
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question2" />
+
         <EditText
-            android:layout_width="match_parent"
-            android:hint="Enter your answer here"
-            android:inputType="text"
             android:id="@+id/answer2"
-            android:layout_height="wrap_content" />
+            style="@style/MyEditTextStyle"
+            android:hint="@string/hint1" />
 
         <TextView
-            android:text="Which device can be used to store charge ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question3"/>
+            android:id="@+id/question3"
+
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question3" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioButton
-                android:text="Transistor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option1_question3"/>
+                android:id="@+id/option1_question3"
+                style="@style/MyOptionStyle"
+                android:text="@string/option1" />
+
             <RadioButton
-                android:text="Diode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option2_question3"/>
+                android:id="@+id/option2_question3"
+                style="@style/MyOptionStyle"
+                android:text="@string/option2" />
+
             <RadioButton
-                android:text="Capacitor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option3_question3"/>
+                android:id="@+id/option3_question3"
+                style="@style/MyOptionStyle"
+                android:text="@string/option3" />
+
             <RadioButton
-                android:text="Resistor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option4_question3"/>
+                android:id="@+id/option4_question3"
+                style="@style/MyOptionStyle"
+                android:text="@string/option4" />
         </RadioGroup>
 
         <TextView
-            android:text="Modem stands for"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question4"/>
+            android:id="@+id/question4"
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question4" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioButton
-                android:text="Modulator Demodulator"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option1_question4"/>
+                android:id="@+id/option1_question4"
+                style="@style/MyOptionStyle"
+                android:text="@string/option5" />
+
             <RadioButton
-                android:text="Memory Demagnetization"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option2_question4"/>
+                android:id="@+id/option2_question4"
+                style="@style/MyOptionStyle"
+                android:text="@string/option6" />
+
             <RadioButton
-                android:text="Monetary Demarkation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option3_question4"/>
+                android:id="@+id/option3_question4"
+                style="@style/MyOptionStyle"
+                android:text="@string/option7" />
+
             <RadioButton
-                android:text="Monetary Devaluation Exchange Mechanism"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option4_question4"/>
+                android:id="@+id/option4_question4"
+                style="@style/MyOptionStyle"
+                android:text="@string/option8" />
         </RadioGroup>
 
         <TextView
-            android:text="In digital circuit, what is 1 AND 1 ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question5"/>
+            android:id="@+id/question5"
+
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question5" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioButton
-                android:text="0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option1_question5"/>
+                android:id="@+id/option1_question5"
+                style="@style/MyOptionStyle"
+                android:text="@string/option9" />
+
             <RadioButton
-                android:text="1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option2_question5"/>
+                android:id="@+id/option2_question5"
+                style="@style/MyOptionStyle"
+                android:text="@string/option10" />
+
             <RadioButton
-                android:text="2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option3_question5"/>
+                android:id="@+id/option3_question5"
+                style="@style/MyOptionStyle"
+                android:text="@string/option11" />
+
             <RadioButton
-                android:text="4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option4_question5"/>
+                android:id="@+id/option4_question5"
+                style="@style/MyOptionStyle"
+                android:text="@string/option12" />
         </RadioGroup>
 
         <TextView
-            android:text="A computer on network that requests file from another computer ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question6"/>
+            android:id="@+id/question6"
+
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question6" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioButton
-                android:text="Host"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option1_question6"/>
+                android:id="@+id/option1_question6"
+                style="@style/MyOptionStyle"
+                android:text="@string/option13" />
+
             <RadioButton
-                android:text="Router"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option2_question6"/>
+                android:id="@+id/option2_question6"
+                style="@style/MyOptionStyle"
+                android:text="@string/option14" />
+
             <RadioButton
-                android:text="Client"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option3_question6"/>
+                android:id="@+id/option3_question6"
+                style="@style/MyOptionStyle"
+                android:text="@string/option15" />
+
             <RadioButton
-                android:text="Server"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/option4_question6"/>
+                android:id="@+id/option4_question6"
+                style="@style/MyOptionStyle"
+                android:text="@string/option16" />
         </RadioGroup>
 
         <TextView
-            android:text="Which of the following is/are Mobile Companies ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question7"/>
+            android:id="@+id/question7"
+
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question7" />
+
         <CheckBox
-            android:text="Oppo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option1_question7"/>
+            android:id="@+id/option1_question7"
+            style="@style/MyOptionStyle"
+
+            android:text="@string/option17" />
+
         <CheckBox
-            android:text="Tata Sky"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option2_question7"/>
+            android:id="@+id/option2_question7"
+            style="@style/MyOptionStyle"
+            android:text="@string/option18" />
+
         <CheckBox
-            android:text="Vivo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option3_question7"/>
+            android:id="@+id/option3_question7"
+            style="@style/MyOptionStyle"
+            android:text="@string/option19" />
+
         <CheckBox
-            android:text="Nokia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option4_question7"/>
+            android:id="@+id/option4_question7"
+            style="@style/MyOptionStyle"
+            android:text="@string/option20" />
 
         <TextView
-            android:text="Which of the following is/are Google product/s ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question8"/>
+            android:id="@+id/question8"
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+
+            android:text="@string/question8" />
+
         <CheckBox
-            android:text="Youtube"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option1_question8"/>
+            android:id="@+id/option1_question8"
+            style="@style/MyOptionStyle"
+            android:text="@string/option21" />
+
         <CheckBox
-            android:text="Duo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option2_question8"/>
+            android:id="@+id/option2_question8"
+            style="@style/MyOptionStyle"
+            android:text="@string/option22" />
+
         <CheckBox
-            android:text="Siri"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option3_question8"/>
+
+            android:id="@+id/option3_question8"
+            style="@style/MyOptionStyle"
+            android:text="@string/option23" />
+
         <CheckBox
-            android:text="Cortona"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option4_question8"/>
+            android:id="@+id/option4_question8"
+            style="@style/MyOptionStyle"
+            android:text="@string/option24" />
 
         <TextView
-            android:text="Which of the following metal/s is/are not ductile ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question9"/>
+            android:id="@+id/question9"
+
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question9" />
+
         <CheckBox
-            android:text="Copper"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option1_question9"/>
+            android:id="@+id/option1_question9"
+            style="@style/MyOptionStyle"
+            android:text="@string/option25" />
+
         <CheckBox
-            android:text="Arsenic"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option2_question9"/>
+            android:id="@+id/option2_question9"
+            style="@style/MyOptionStyle"
+            android:text="@string/option26" />
+
         <CheckBox
-            android:text="Barium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option3_question9"/>
+            android:id="@+id/option3_question9"
+            style="@style/MyOptionStyle"
+            android:text="@string/option27" />
+
         <CheckBox
-            android:text="Antimony"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option4_question9"/>
+            android:id="@+id/option4_question9"
+            style="@style/MyOptionStyle"
+            android:text="@string/option28" />
 
         <TextView
-            android:text="Which of the following is/are not a part of Internet ?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/question0"/>
+            android:id="@+id/question0"
+
+            style="@style/MyTextViewStyle"
+            android:layout_marginTop="@dimen/padding16"
+            android:text="@string/question0" />
+
         <CheckBox
-            android:text="World Wide Web"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option1_question0"/>
+            android:id="@+id/option1_question0"
+            style="@style/MyOptionStyle"
+            android:text="@string/option29" />
+
         <CheckBox
-            android:text="CD-ROM"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option2_question0"/>
+            android:id="@+id/option2_question0"
+            style="@style/MyOptionStyle"
+            android:text="@string/option30" />
+
         <CheckBox
-            android:text="SSD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option3_question0"/>
+            android:id="@+id/option3_question0"
+            style="@style/MyOptionStyle"
+            android:text="@string/option31" />
+
         <CheckBox
-            android:text="HTTP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/option4_question0"/>
+            android:id="@+id/option4_question0"
+            style="@style/MyOptionStyle"
+            android:text="@string/option32" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+
             <Button
-                android:text="Submit"
-                android:onClick="CalculateScore"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:onClick="CalculateScore"
+                android:text="@string/submit"
+                android:textSize="@dimen/textSize18" />
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>

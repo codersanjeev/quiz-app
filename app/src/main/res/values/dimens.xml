@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding16">16dp</dimen>
+    <dimen name="textSize18">18sp</dimen>
+    <dimen name="padding12">12dp</dimen>
+    <dimen name="height56">56dp</dimen>
+</resources>

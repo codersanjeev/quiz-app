@@ -8,4 +8,25 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyTextViewStyle">
+        <item name="android:textSize">@dimen/textSize18</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MyOptionStyle">
+        <item name="android:padding">@dimen/padding12</item>
+        <item name="android:textSize">@dimen/textSize18</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MyEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height56</item>
+        <item name="android:padding">@dimen/padding12</item>
+        <item name="android:inputType">text</item>
+    </style>
+
 </resources>
